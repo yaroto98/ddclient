@@ -13,6 +13,8 @@ Clone git repo:
 	git clone https://github.com/yaroto98/ddclient ddclient
 
 add crontab (as root):
+
 	crontab -e
+
 	*/15 * * * * /root/cronscripts/myddclient.sh > /dev/null 2>&1
 
