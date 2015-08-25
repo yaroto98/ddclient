@@ -25,7 +25,7 @@ update() {
         password="$3"
         for host in ${hostlist[@]}
         do
-                response=`curl http://dynamicdns.park-your-domain.com/update?host=$host\&domain=$domain\&password=$password`
+                response=`curl http://dynamicdns.park-your-domain.com/update?host="$host"\&domain="$domain"\&password="$password"`
                 echo
                 errorcount=`echo "\"$response\"" | perl -pe "s/.*\<ErrCount\>(\d+)\<\/ErrCount\>.*/\\$1/gi"`
                 if [ $errorcount -gt 0 ]; then
