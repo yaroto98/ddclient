@@ -1,7 +1,6 @@
 #/bin/bash
 haschanged() {
         isdiff=0
-#       echo $hostlist
         hostlist=$1
         domain="$2"
         ipaddressnew=`dig +short myip.opendns.com @resolver1.opendns.com`
