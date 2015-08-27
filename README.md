@@ -16,5 +16,5 @@ add crontab (as root):
 
 	crontab -e
 
-	*/15 * * * * /root/ddclient/myddclient.sh > /dev/null 2>&1
+	*/15 * * * * /bin/bash /root/ddclient/myddclient.sh > /dev/null 2>&1
 
